@@ -9,6 +9,8 @@ import TableCell from '@material-ui/core/TableCell';
 import {withStyles} from '@material-ui/core/styles'; 
 import Paper from'@material-ui/core/Paper';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import CustomerAdd from './components/CustomerAdd';
+
 
 const styles = theme =>({
   root:{
@@ -53,7 +55,8 @@ class App extends Component {
   render() {
     const{classes} = this.props;
     return (
-      <Paper className={classes.root}>
+      <div>
+        <Paper className={classes.root}>
         <Table className={classes.table}>
           <TableHead>
             <TableRow>
@@ -74,11 +77,11 @@ class App extends Component {
               </TableCell>
             </TableRow>
             }
-          </TableBody>
-        </Table>
-      
-    
-      </Paper>
+            </TableBody>
+          </Table>             
+        </Paper>
+        <CustomerAdd/>
+      </div>    
     );
   }
 }
